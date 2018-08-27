@@ -1,0 +1,10 @@
+.native-frame .darwin-title-bar {
+	background-color: #ffffff !important;
+}
+
+.native-frame .darwin-title-bar .title {
+  color: #aaaaaa;
+  font-size: 11px;
+  font-family: 'Helvetica Neue';
+  letter-spacing: .5px;
+}

@@ -1,0 +1,55 @@
+// Imports
+@import 'mixins';
+
+// Webfonts
+@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayLight', 300);
+@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayRegular', 400);
+@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayMedium', 500);
+@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplaySemibold', 600);
+@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayBold', 700);
+
+// Variables
+$font: 'San Francisco', 'Helvetica Neue', Helvetica, sans-serif;
+
+// Background
+body,
+body.qp {
+  font-family: $font;
+  background: #fff;
+
+  // Fonts
+  * {
+    font-family: $font;
+  }
+}
+
+// Disable top shadow
+.paper-header-panel-0 #dropShadow.paper-header-panel,
+body #dropShadow.paper-header-panel {
+  display: none;
+}
+
+// Albums grid
+.gpm-card-grid {
+
+  // Remove shadows from albums
+  .sj-card-0 .sj-card,
+  .sj-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  // Remove border-radius
+  .sj-card-0 .sj-card > [slot="image"],
+  img,
+  [slot="image"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+// Player
+#player {
+  box-shadow: none;
+}
+
