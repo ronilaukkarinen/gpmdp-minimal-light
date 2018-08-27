@@ -2,14 +2,47 @@
 @import 'mixins';
 
 // Webfonts
-@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayLight', 300);
-@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayRegular', 400);
-@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayMedium', 500);
-@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplaySemibold', 600);
-@include fontFace('San Francisco', 'https://rolle.design/fonts/SanFranciscoDisplayBold', 700);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Light', 300);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Regular', 400);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Roman', 500);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Bold', 600);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Heavy', 700);
+@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Black', 900);
 
 // Variables
-$font: 'San Francisco', 'Helvetica Neue', Helvetica, sans-serif;
+$font: 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
+$color-dark: #292a29;
+$color-weak: #9c9e9d;
+$color-accent: #ff2c56; // Original: #ff5722
+
+// Change color theme
+#player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]),
+#player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="repeat"].active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="shuffle"].active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-shuffle.active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-repeat.active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-queue.opened:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="queue"].opened:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button:not([style-scope]):not(.style-scope) #exp-menu-queue.opened:not([style-scope]):not(.style-scope),
+.gpm-quick-nav-2 .items.gpm-quick-nav > [selected] {
+  color: $color-accent !important;
+}
+
+.paper-slider-0 .slider-knob-inner.paper-slider,
+.paper-fab-0,
+.paper-progress-2 #primaryProgress.paper-progress,
+.paper-button-2 {
+  background-color: $color-accent !important;
+  border-color: $color-accent !important;
+  box-shadow: none !important;
+}
+
+// Hide Google Play Music Logo
+#material-one-left > .music-logo-link,
+#material-one-left > .music-logo-image {
+  display: none;
+}
+
+// A bit wider on windowed
+@media (max-width: 1399px) and (min-width: 1250px) {
+  paper-header-panel #music-content .recent-view {
+      width: 1000px;
+  }
+}
 
 // Background
 body,
@@ -23,10 +56,46 @@ body.qp {
   }
 }
 
+// Disable search bar borders and shadows
+.qp #material-one-middle .material-search {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 // Disable top shadow
 .paper-header-panel-0 #dropShadow.paper-header-panel,
 body #dropShadow.paper-header-panel {
   display: none;
+}
+
+// Disable top border
+paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar:not([style-scope]):not(.style-scope),
+body #content-container {
+  border: 0 !important;
+}
+
+// Grid title
+.gpm-card-grid-0 > [slot="title"],
+h2[slot="title"] {
+  color: $color-dark;
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  margin-top: 60px !important;
+  margin-bottom: 40px !important;
+}
+
+// Wider album grid gaps
+.gpm-card-grid-0 gpm-colored-now-card.gpm-card-grid,
+.gpm-card-grid-0:not(.mini) div.gpm-card-grid > sj-card {
+  width: calc((100% - (62px * (5 - 1))) / 5);
+  margin: 32px 62px 0 0;
+}
+
+// Wider container
+@media (max-width: 1849px) and (min-width: 1400px) {
+  body #music-content .recent-view {
+    width: 1200px;
+  }
 }
 
 // Albums grid
@@ -46,6 +115,125 @@ body #dropShadow.paper-header-panel {
     border-radius: 0 !important;
     box-shadow: none !important;
   }
+
+  // Stronger album titles
+  .sj-card-0 #details.sj-card > [slot="title"],
+  [slot="title"] {
+    font-weight: 600;
+    color: $color-dark;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+
+  // Weaker artist names
+  .sj-card-0 #details.sj-card > [slot="subtitle"],
+  [slot="subtitle"] {
+    font-size: 13px;
+    line-height: 21px;
+    color: $color-weak;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+// Dimmer track numbers
+.song-row td[data-col="track"] .column-content,
+.song-table [data-col="index"],
+body .song-table [data-col="track"],
+.song-table [data-col="index"],
+.song-table [data-col="track"] * {
+  color: #aaa !important;
+}
+
+// Force darker song names in listings
+.song-table [data-col="title"],
+.song-table [data-col="title"] *,
+.song-table.tight .song-row .column-content {
+  color: #343434;
+}
+
+// Fix song indicator position
+.song-table.tight .song-row [data-col="track"] .song-indicator {
+  left: -15px !important;
+}
+
+// Attractive album title
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
+  font-size: 55px !important;
+  font-weight: 900 !important;
+  color: $color-dark !important;
+  margin-top: 0 !important;
+  padding-top: 15px !important;
+  margin-bottom: 10px !important;
+}
+
+// Attractive artist title
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="subtitle"] {
+  font-size: 19px !important;
+  font-weight: 300 !important;
+}
+
+// Fix artist title overflow
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
+  overflow: visible !important;
+}
+
+// Force small details
+.gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header > div.gpm-detail-page-header,
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="description"],
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="metadata"] {
+  font-size: 13px !important;
+}
+
+// Disale shadows and border radius in album images
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="image"] {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+// Bigger album art in single album view
+.gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
+  width: 250px !important;
+  height: 250px !important;
+}
+
+// Bigger arist image
+.artist-view .gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
+  width: 350px !important;
+  height: 350px !important;
+}
+
+// Bigger artist title
+.artist-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
+  font-size: 70px !important;
+}
+
+// Fix play button position
+.gpm-detail-page-header-0 #playButton.gpm-detail-page-header {
+  top: 5px;
+}
+
+// Disable shadows in material cards
+.material-card,
+.material-shadow-z1,
+.draggable,
+.material-card:hover,
+.material-shadow-z1:hover,
+.draggable:hover,
+.entity-card.material-card.focused {
+  box-shadow: none !important;
+}
+
+// Remove some margins
+.cluster .header .more,
+.cluster .header-inner {
+  margin: 0 !important;
+}
+
+// Disable shadows in song list container
+body .songlist-container {
+  box-shadow: none !important;
 }
 
 // Player
