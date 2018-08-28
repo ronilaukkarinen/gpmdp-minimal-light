@@ -73,7 +73,7 @@ h2[slot="title"] {
   color: $color-dark;
   font-size: 42px !important;
   font-weight: 900 !important;
-  margin-top: 60px !important;
+  margin-top: 40px !important;
   margin-bottom: 40px !important;
 }
 
@@ -234,3 +234,26 @@ body .songlist-container {
   box-shadow: none;
 }
 
+// Don't show stuff by default, only on hover
+body .items.gpm-quick-nav,
+body .more.gpm-quick-nav,
+#material-one-right,
+#material-one-middle,
+#material-one-left,
+#material-player-right-wrapper,
+[slot="ifl-fab"],
+#player #playerSongInfo .now-playing-info-wrapper .now-playing-actions {
+  opacity: 0 !important;
+  transition: all .22s !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+#quick-nav-container:hover .items.gpm-quick-nav,
+#quick-nav-container:hover .more.gpm-quick-nav,
+#player:hover #playerSongInfo .now-playing-info-wrapper .now-playing-actions,
+#player.active:hover #material-player-right-wrapper {
+  opacity: 1 !important;
+}
