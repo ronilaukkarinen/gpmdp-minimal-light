@@ -68,6 +68,12 @@ body.qp {
   box-shadow: none !important;
 }
 
+// Disable panel shadows
+.paper-drawer-panel-1 .narrow-layout.paper-drawer-panel > #drawer.iron-selected.paper-drawer-panel,
+#drawer {
+  box-shadow: none !important;
+}
+
 // Disable top shadow
 .paper-header-panel-0 #dropShadow.paper-header-panel,
 body #dropShadow.paper-header-panel {
