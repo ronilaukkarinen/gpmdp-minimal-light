@@ -269,7 +269,8 @@ body .more.gpm-quick-nav,
 #material-one-left,
 #material-player-right-wrapper,
 [slot="ifl-fab"],
-#player #playerSongInfo .now-playing-info-wrapper .now-playing-actions {
+#player #playerSongInfo .now-playing-info-wrapper .now-playing-actions,
+[data-id=show-miniplayer-dp] {
   opacity: 0 !important;
   transition: all .22s !important;
 
@@ -281,6 +282,7 @@ body .more.gpm-quick-nav,
 #quick-nav-container:hover .items.gpm-quick-nav,
 #quick-nav-container:hover .more.gpm-quick-nav,
 #player:hover #playerSongInfo .now-playing-info-wrapper .now-playing-actions,
-#player.active:hover #material-player-right-wrapper {
+#player.active:hover #material-player-right-wrapper
+#player:hover [data-id=show-miniplayer-dp] {
   opacity: 1 !important;
 }
