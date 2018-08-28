@@ -153,7 +153,8 @@ h2[slot="title"] {
 }
 
 // Remove underlines in hover, replace with accent color
-.material-card .title:focus, .material-card .title:hover,
+.material-card .title:focus,
+.material-card .title:hover,
 .material-card .sub-title[data-type]:focus,
 .material-card .sub-title[data-type]:hover,
 .sj-card-0 div.sj-card > a[href]:hover,
@@ -161,7 +162,19 @@ h2[slot="title"] {
 .sj-card-0 div.sj-card > a[href]:hover,
 .sj-card-0 div.sj-card > a:focus,
 .detail-view .view-header a[href]:hover,
-.detail-view .view-header a:focus {
+.detail-view .view-header a:focus,
+.song-row [data-col="artist"] .text:hover,
+.song-row [data-col="album"] .text:hover,
+.song-row [data-col="series"] .text:hover,
+.song-row [data-col="song-details"] .song-artist:hover,
+.song-row [data-col="song-details"] .song-album:hover,
+.song-row [data-col="song-details"] .episode-series:hover,
+.song-row [data-col="artist"] .text:hover,
+.song-row [data-col="album"] .text:hover,
+.song-row [data-col="series"] .text:hover,
+.song-row [data-col="song-details"] .song-artist:hover,
+.song-row [data-col="song-details"] .song-album:hover,
+.song-row [data-col="song-details"] .episode-series:hover {
   text-decoration: none !important;
   color: $color-accent !important;
 }
@@ -241,6 +254,18 @@ body .material-card .title {
 // Equal currently playing song row background
 .song-row.selected-song-row td, .song-row.currently-playing td {
   background: $color-light !important;
+}
+
+// Disable song row hovers
+.song-row:hover,
+.song-row:hover td {
+  background: $color-light !important;
+
+  [data-col=title],
+  [data-col=title] *,
+  .column-content {
+    color: $color-accent !important;
+  }
 }
 
 // Dimmer track numbers
