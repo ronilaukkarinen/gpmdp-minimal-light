@@ -1,16 +1,8 @@
 # Minimal Light theme for Google Play Music
 
-# *Make Google Play Music User Interface great again!*
+## *Make Google Play Music User Interface great again!*
 
 Light, minimal theme for [Google Play Music Desktop Player](https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-).
-
-![Screenshot](https://i.imgur.com/uD92IE3.png "Screenshot")
-
-![Screenshot](https://i.imgur.com/zy0KjTj.png "Screenshot")
-
-![Screenshot](https://i.imgur.com/X1x9tbf.png "Screenshot")
-
-![Screenshot](https://i.imgur.com/EZ8YyAV.png "Screenshot")
 
 ### Features
 
@@ -20,6 +12,14 @@ Light, minimal theme for [Google Play Music Desktop Player](https://github.com/M
 - More minimal typography
 - Concentrates on cover art and artist images
 - Fresher accent color
+
+![Screenshot](https://i.imgur.com/uD92IE3.png "Screenshot")
+
+![Screenshot](https://i.imgur.com/zy0KjTj.png "Screenshot")
+
+![Screenshot](https://i.imgur.com/X1x9tbf.png "Screenshot")
+
+![Screenshot](https://i.imgur.com/EZ8YyAV.png "Screenshot")
 
 ### Usage
 
