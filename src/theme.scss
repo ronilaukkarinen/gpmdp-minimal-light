@@ -122,6 +122,26 @@ h2[slot="title"] {
   }
 }
 
+// Remove border radius from search results
+.entity-card.material-card .image-wrapper,
+.entity-card.material-card .image,
+.entity-card.material-card .letter-art {
+  border-radius: 0 !important;
+}
+
+// Bigger images in search results
+.entity-card.material-card .image-wrapper {
+  padding-top: 100% !important;;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.entity-card.material-card .image,
+.entity-card.material-card .letter-art {
+  width: 100% !important;
+  height: auto !important;
+}
+
 // Albums grid
 .gpm-card-grid {
 
@@ -232,8 +252,12 @@ body .sj-card-0 .sj-card.sj-play-button-1 {
 
 // Bigger arist image
 .artist-view .gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
-  width: 350px !important;
-  height: 350px !important;
+  width: 280px !important;
+  height: 280px !important;
+
+  img {
+    image-rendering: crisp-edges;
+  }
 }
 
 // Bigger artist title
