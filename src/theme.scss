@@ -30,6 +30,12 @@ paper-button.upsell-button:not([style-scope]):not(.style-scope),
   box-shadow: none !important;
 }
 
+// Hide Subscribe-button
+paper-button.upsell-button:not([style-scope]):not(.style-scope),
+.upsell-element:not([style-scope]):not(.style-scope) {
+  display: none !important;
+}
+
 // Library selection bar color
 .paper-tabs-1 #selectionBar.paper-tabs {
   border-color: $color-accent !important;
