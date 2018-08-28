@@ -15,15 +15,15 @@ Light, minimal theme for [Google Play Music Desktop Player](https://github.com/M
 
 ### Screenshots
 
-![Screenshot](https://i.imgur.com/xYgbdok.png "Screenshot")
+![Screenshot](https://i.imgur.com/9VzZ4TW.png "Screenshot")
 
-![Screenshot](https://i.imgur.com/XhYJCG7.png "Screenshot")
+![Screenshot](https://i.imgur.com/lM4EB6d.png "Screenshot")
 
-![Screenshot](https://i.imgur.com/ntUzMkU.png "Screenshot")
+![Screenshot](https://i.imgur.com/FUsERDi.png "Screenshot")
 
-![Screenshot](https://i.imgur.com/zy0KjTj.png "Screenshot")
+![Screenshot](https://i.imgur.com/wfD28qS.png "Screenshot")
 
-![Screenshot](https://i.imgur.com/uD92IE3.png "Screenshot")
+![Screenshot](https://i.imgur.com/ENAuL1N.png "Screenshot")
 
 ### Usage
 
