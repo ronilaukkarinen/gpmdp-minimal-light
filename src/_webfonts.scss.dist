@@ -1,0 +1,7 @@
+// Webfonts
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Light', 300);
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Regular', 400);
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Roman', 500);
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Bold', 600);
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Heavy', 700);
+@include fontFace('Avenir', 'https://your.domain/fonts/Avenir-Black', 900);

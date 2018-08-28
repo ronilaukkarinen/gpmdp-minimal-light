@@ -1,13 +1,6 @@
 // Imports
 @import 'mixins';
-
-// Webfonts
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Light', 300);
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Regular', 400);
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Roman', 500);
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Bold', 600);
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Heavy', 700);
-@include fontFace('Avenir', 'https://rolle.design/fonts/Avenir-Black', 900);
+@import 'webfonts';
 
 // Variables
 $font: 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
