@@ -185,6 +185,14 @@ body .song-table [data-col="track"],
   border-radius: 0 !important;
 }
 
+// Ensure play button is always round
+body .sj-play-button-1,
+body .sj-play-button,
+body .sj-card-0 .sj-card.sj-play-button,
+body .sj-card-0 .sj-card.sj-play-button-1 {
+  border-radius: 50% !important;
+}
+
 // Bigger album art in single album view
 .gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
   width: 250px !important;
