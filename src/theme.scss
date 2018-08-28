@@ -24,7 +24,9 @@ $color-accent: #ff2c56; // Original: #ff5722
 .paper-button-2,
 .sj-play-button-0,
 paper-button.upsell-button:not([style-scope]):not(.style-scope),
-.upsell-element:not([style-scope]):not(.style-scope) {
+.upsell-element:not([style-scope]):not(.style-scope),
+.paper-slider-1 .slider-knob-inner.paper-slider,
+.paper-progress-3 #primaryProgress.paper-progress {
   background-color: $color-accent !important;
   border-color: $color-accent !important;
   box-shadow: none !important;
