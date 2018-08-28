@@ -304,7 +304,8 @@ body .song-table.tight .song-row .column-content .hover-button {
 }
 
 // More space between rows
-.song-table.tight .song-row td {
+.song-table.tight .song-row td,
+.song-table.tight .song-row {
   height: 50px !important;
 }
 
@@ -312,9 +313,11 @@ body .song-table.tight .song-row .column-content .hover-button {
 .song-table [data-col="play-count"],
 .song-table [data-col="rating"]:last-child,
 .song-table [data-col="rating"] {
+  white-space: nowrap !important;
+  height: 50px !important;
   width: 0 !important;
   opacity: 0 !important;
-  transition: all .5s !important;
+  transition: none !important;
   color: rgba(#b6bdc5, .8) !important;
 
   * {
@@ -332,6 +335,8 @@ body .song-table.tight .song-row .column-content .hover-button {
   left: 17px !important;
   position: relative !important;
   opacity: .4 !important;
+  white-space: nowrap !important;
+  height: 50px !important;
 }
 
 // Duration color
@@ -351,11 +356,15 @@ body .song-table.tight .song-row .column-content .hover-button {
 
 // Fade and slide in to view
 .detail-view .song-table:hover [data-col="play-count"] {
+  white-space: nowrap !important;
+  height: 50px !important;
   width: 50px !important;
   opacity: 1 !important;
 }
 
 .detail-view .song-table:hover [data-col="rating"] {
+  white-space: nowrap !important;
+  height: 50px !important;
   width: 90px !important;
   opacity: 1 !important;
 }
@@ -460,6 +469,18 @@ paper-tabs.tab-container {
 // Player
 #player {
   box-shadow: none;
+}
+
+// Always thinner progress bar
+.paper-progress-2 #progressContainer.paper-progress,
+.paper-progress-2 .indeterminate.paper-progress::after {
+  height: 2px !important;
+}
+
+// Show progress bar always, a bit dimmer than normally
+#player:hover #material-player-progress:not([disabled]) #progressContainer,
+#player #material-player-progress:not([disabled]) #progressContainer {
+  background-color: #efefef !important;
 }
 
 // Don't show stuff by default, only on hover
