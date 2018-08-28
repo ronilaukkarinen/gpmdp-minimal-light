@@ -124,6 +124,14 @@ h2[slot="title"] {
   }
 }
 
+// Fix wide resolutions
+@media (min-width: 1850px) {
+  .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(-n + 6),
+  .gpm-card-grid-0 gpm-colored-now-card.gpm-card-grid, .gpm-card-grid-0:not(.mini) div.gpm-card-grid>sj-card {
+    margin: 32px 49px 0 0 !important;
+  }
+}
+
 // Remove border radius from search results
 .entity-card.material-card .image-wrapper,
 .entity-card.material-card .image,
@@ -143,10 +151,28 @@ h2[slot="title"] {
   display: none !important;
 }
 
+// Remove underlines in hover, replace with accent color
+.material-card .title:focus, .material-card .title:hover,
+.material-card .sub-title[data-type]:focus,
+.material-card .sub-title[data-type]:hover,
+.sj-card-0 div.sj-card > a[href]:hover,
+.sj-card-0 div.sj-card > a:focus,
+.sj-card-0 div.sj-card > a[href]:hover,
+.sj-card-0 div.sj-card > a:focus,
+.detail-view .view-header a[href]:hover,
+.detail-view .view-header a:focus {
+  text-decoration: none !important;
+  color: $color-accent !important;
+}
+
 // Make bigger titles not overflow
 .cluster .header .cluster-title,
 .cluster .header .subtitle {
   overflow: visible !important;
+}
+
+.cluster .header {
+  height: auto !important;
 }
 
 // Bigger sub-titles and search result titles
@@ -161,6 +187,15 @@ h2[slot="title"] {
 .entity-card.material-card .letter-art {
   width: 100% !important;
   height: auto !important;
+}
+
+// Stronger album titles in album view
+body .material-card .title {
+  font-weight: 600;
+  color: $color-dark;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
 }
 
 // Albums grid
@@ -270,7 +305,8 @@ body .song-table.tight .song-row .column-content .hover-button {
 body .sj-play-button-1,
 body .sj-play-button,
 body .sj-card-0 .sj-card.sj-play-button,
-body .sj-card-0 .sj-card.sj-play-button-1 {
+body .sj-card-0 .sj-card.sj-play-button-1,
+body #playButton {
   border-radius: 50% !important;
 }
 
