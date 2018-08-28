@@ -136,6 +136,25 @@ h2[slot="title"] {
   margin: 0 !important;
 }
 
+// Remove weird artifact in search results
+.entity-card.material-card .title.fade-out:after {
+  display: none !important;
+}
+
+// Make bigger titles not overflow
+.cluster .header .cluster-title,
+.cluster .header .subtitle {
+  overflow: visible !important;
+}
+
+// Bigger sub-titles and search result titles
+.cluster .header .cluster-title {
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  margin-bottom: 20px !important;
+  margin-top: 30px !important;
+}
+
 .entity-card.material-card .image,
 .entity-card.material-card .letter-art {
   width: 100% !important;
