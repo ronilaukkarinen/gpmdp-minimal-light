@@ -11,14 +11,20 @@ $color-accent: #ff2c56; // Original: #ff5722
 // Change color theme
 #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]),
 #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="repeat"].active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="shuffle"].active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-shuffle.active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-repeat.active:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) #exp-menu-queue.opened:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button[data-id="queue"].opened:not([style-scope]):not(.style-scope), #player:not([style-scope]):not(.style-scope) paper-icon-button:not([style-scope]):not(.style-scope) #exp-menu-queue.opened:not([style-scope]):not(.style-scope),
-.gpm-quick-nav-2 .items.gpm-quick-nav > [selected] {
+.gpm-quick-nav-2 .items.gpm-quick-nav > [selected],
+.nav-item-container.selected:not([style-scope]):not(.style-scope),
+.nav-item-container.selected:not([style-scope]):not(.style-scope) iron-icon:not([style-scope]):not(.style-scope),
+.primary:not([style-scope]):not(.style-scope) {
   color: $color-accent !important;
 }
 
 .paper-slider-0 .slider-knob-inner.paper-slider,
 .paper-fab-0,
 .paper-progress-2 #primaryProgress.paper-progress,
-.paper-button-2 {
+.paper-button-2,
+.sj-play-button-0,
+paper-button.upsell-button:not([style-scope]):not(.style-scope),
+.upsell-element:not([style-scope]):not(.style-scope) {
   background-color: $color-accent !important;
   border-color: $color-accent !important;
   box-shadow: none !important;
