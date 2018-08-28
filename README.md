@@ -23,7 +23,7 @@ Light, minimal theme for [Google Play Music Desktop Player](https://github.com/M
 
 ![Screenshot](https://i.imgur.com/uD92IE3.png "Screenshot")
 
-![Screenshot](https://i.imgur.com/EZ8YyAV.png "Screenshot")
+![Screenshot](https://i.imgur.com/xYgbdok.png "Screenshot")
 
 ### Usage
 
