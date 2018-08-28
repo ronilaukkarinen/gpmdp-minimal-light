@@ -472,6 +472,11 @@ paper-tabs.tab-container {
   box-shadow: none;
 }
 
+// Hide slider knob
+.slider-knob-inner {
+  display: none !important;
+}
+
 // Always thinner progress bar
 .paper-progress-2 #progressContainer.paper-progress,
 .paper-progress-2 .indeterminate.paper-progress::after {
