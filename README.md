@@ -34,7 +34,7 @@ Light, minimal theme for [Google Play Music Desktop Player](https://github.com/M
 
 ### Fonts
 
-Avenir fonts is commercial and the license prevents me to include it in this repo. If you have Avenir hosted, you can add it by renaming `src/_webfonts.scss.dist` without .dist suffix and compile SCSS.
+Avenir fonts are commercial and the license prevents me to include it in this repo. If you have Avenir hosted, you can add it by renaming `src/_webfonts.scss.dist` without .dist suffix and compile SCSS.
 
 ### Development
 
