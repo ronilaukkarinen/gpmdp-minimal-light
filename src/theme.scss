@@ -4,6 +4,7 @@
 
 // Variables
 $font: 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
+$color-light: #fff;
 $color-dark: #292a29;
 $color-weak: #9c9e9d;
 $color-accent: #ff2c56; // Original: #ff5722
@@ -68,7 +69,7 @@ paper-button.upsell-button:not([style-scope]):not(.style-scope),
 body,
 body.qp {
   font-family: $font;
-  background: #fff;
+  background: $color-light;
 
   // Fonts
   * {
@@ -237,13 +238,18 @@ body .material-card .title {
   }
 }
 
+// Equal currently playing song row background
+.song-row.selected-song-row td, .song-row.currently-playing td {
+  background: $color-light !important;
+}
+
 // Dimmer track numbers
 .song-row td[data-col="track"] .column-content,
 .song-table [data-col="index"],
 body .song-table [data-col="track"],
 .song-table [data-col="index"],
 .song-table [data-col="track"] * {
-  color: #aaa !important;
+  color: rgba(#b6bdc5, .8) !important;
 }
 
 // Force darker song names in listings
@@ -255,10 +261,10 @@ body .song-table [data-col="track"],
 
 // Force light play button container in song-row
 body .song-table.tight .song-row .column-content .hover-button {
-  color: #fff !important;
+  color: $color-light !important;
 
   * {
-    color: #fff !important;
+    color: $color-light !important;
   }
 }
 
