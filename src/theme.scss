@@ -24,6 +24,19 @@ $color-accent: #ff2c56; // Original: #ff5722
   box-shadow: none !important;
 }
 
+// Library selection bar color
+.paper-tabs-1 #selectionBar.paper-tabs {
+  border-color: $color-accent !important;
+
+  // Hide selection bar for even more minimal look
+  opacity: 0 !important;
+}
+
+// Not selected library items in dimmer color
+.paper-tab-0:not(.iron-selected) > .tab-content.paper-tab {
+  opacity: .4 !important;
+}
+
 // Hide Google Play Music Logo
 #material-one-left > .music-logo-link,
 #material-one-left > .music-logo-image {
@@ -235,6 +248,12 @@ body .sj-card-0 .sj-card.sj-play-button-1 {
 // Disable shadows in song list container
 body .songlist-container {
   box-shadow: none !important;
+}
+
+// No uppercase text in library
+#innerjam-tabs-container paper-tabs,
+paper-tabs.tab-container {
+  text-transform: none !important;
 }
 
 // Player
