@@ -174,7 +174,9 @@ h2[slot="title"] {
 .song-row [data-col="series"] .text:hover,
 .song-row [data-col="song-details"] .song-artist:hover,
 .song-row [data-col="song-details"] .song-album:hover,
-.song-row [data-col="song-details"] .episode-series:hover {
+.song-row [data-col="song-details"] .episode-series:hover,
+#player-artist[data-type]:hover,
+.player-album[data-type]:hover {
   text-decoration: none !important;
   color: $color-accent !important;
 }
