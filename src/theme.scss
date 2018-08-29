@@ -486,6 +486,38 @@ paper-tabs.tab-container {
   box-shadow: none;
 }
 
+// Hide player dash
+.player-dash {
+  display: none !important;
+}
+
+// Currently playing song styles
+#playerSongInfo .now-playing-info-wrapper #currently-playing-title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+}
+
+// Player artist and album styles
+#player-artist {
+  color: #777 !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 16px !important;
+  margin-right: 10px !important;
+}
+
+.player-album {
+  font-size: 13px !important;
+  opacity: 0 !important;
+  transition: all .22s !important;
+  color: #999 !important;
+}
+
+.now-playing-info-content:hover .player-album {
+  opacity: 1 !important;
+}
+
 // Hide slider knob
 .slider-knob-inner {
   display: none !important;
