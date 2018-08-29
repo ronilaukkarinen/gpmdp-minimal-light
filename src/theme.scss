@@ -289,6 +289,12 @@ body .song-table [data-col="track"],
   color: rgba(#b6bdc5, .8) !important;
 }
 
+// Wider track number
+.song-table [data-col="index"],
+.song-table [data-col="track"] {
+  width: 60px !important;
+}
+
 // Force darker song names in listings
 .song-table [data-col="title"],
 .song-table [data-col="title"] *,
