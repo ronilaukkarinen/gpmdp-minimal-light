@@ -343,15 +343,29 @@ body .song-table.tight .song-row .column-content .hover-button {
 .detail-view .song-table.tight .song-row [data-col="rating"][data-rating="3"]
 .detail-view .song-table.tight .song-row [data-col="rating"][data-rating="2"],
 .detail-view .song-table.tight .song-row [data-col="rating"][data-rating="1"] {
-  background: no-repeat url(sprites.png) 0 -291px !important;
-  background-size: 247px 418px !important;
-  top: -1px !important;
-  transition: none !important;
-  left: 17px !important;
-  position: relative !important;
-  opacity: .4 !important;
   white-space: nowrap !important;
-  height: 50px !important;
+}
+
+// Better thumb icons
+.song-table.tight .song-row [data-col="rating"][data-rating="1"],
+.song-table.tight .song-row [data-col="rating"][data-rating="2"] {
+  background: url('https://rolle.design/gpm-thumbs-down.svg') no-repeat 26px 11px !important;
+}
+
+.song-table.tight .song-row [data-col="rating"][data-rating="4"],
+.song-table.tight .song-row [data-col="rating"][data-rating="5"] {
+  background: url('https://rolle.design/gpm-thumbs-up.svg') no-repeat 26px 11px !important;
+}
+
+// Hide on hover
+.song-table.tight .song-row:hover [data-col="rating"][data-rating="1"],
+.song-table.tight .song-row:hover [data-col="rating"][data-rating="2"] {
+  background: none !important;
+}
+
+.song-table.tight .song-row:hover [data-col="rating"][data-rating="4"],
+.song-table.tight .song-row:hover [data-col="rating"][data-rating="5"] {
+  background: none !important;
 }
 
 // Duration color
@@ -372,14 +386,12 @@ body .song-table.tight .song-row .column-content .hover-button {
 // Fade and slide in to view
 .detail-view .song-table:hover [data-col="play-count"] {
   white-space: nowrap !important;
-  height: 50px !important;
   width: 50px !important;
   opacity: 1 !important;
 }
 
 .detail-view .song-table:hover [data-col="rating"] {
   white-space: nowrap !important;
-  height: 50px !important;
   width: 90px !important;
   opacity: 1 !important;
 }
