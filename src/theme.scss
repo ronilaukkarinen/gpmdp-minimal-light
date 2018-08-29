@@ -257,6 +257,15 @@ body .material-card .title {
   background: $color-light !important;
 }
 
+// Selected styles
+.song-row.selected-song-row {
+  [data-col=title],
+  [data-col=title] *,
+  .column-content {
+    color: $color-accent !important;
+  }  
+}
+
 // Disable song row hovers
 .song-row:hover,
 .song-row:hover td {
