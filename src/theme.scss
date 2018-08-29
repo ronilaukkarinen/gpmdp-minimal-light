@@ -113,24 +113,32 @@ h2[slot="title"] {
 
 // Wider album grid gaps
 .gpm-card-grid-0 gpm-colored-now-card.gpm-card-grid,
-.gpm-card-grid-0:not(.mini) div.gpm-card-grid > sj-card {
-  width: calc((100% - (62px * (5 - 1))) / 5);
+.gpm-card-grid-0:not(.mini) div.gpm-card-grid > sj-card,
+.gpm-card-grid-1 gpm-colored-now-card.gpm-card-grid,
+.gpm-card-grid-1:not(.mini) div.gpm-card-grid > sj-card {
+  width: calc((100% - (62px * (4 - 1))) / 4) !important;
   margin: 32px 62px 0 0;
 }
 
-// Wider container
-@media (max-width: 1849px) and (min-width: 1400px) {
-  body #music-content .recent-view {
-    width: 1200px;
-  }
+.gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(5n + 5) {
+  margin: 32px 62px 0 0 !important;
 }
 
-// Fix wide resolutions
-@media (min-width: 1850px) {
-  .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(-n + 6),
-  .gpm-card-grid-0 gpm-colored-now-card.gpm-card-grid, .gpm-card-grid-0:not(.mini) div.gpm-card-grid>sj-card {
-    margin: 32px 49px 0 0 !important;
-  }
+body .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(4n + 4) {
+  margin-right: 0 !important;
+}
+
+.gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(-n + 4) {
+  margin-top: 0 !important;
 }
 
 // Remove border radius from search results
