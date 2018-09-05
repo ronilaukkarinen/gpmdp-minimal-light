@@ -15,7 +15,12 @@ $color-accent: #ff2c56; // Original: #ff5722
 .gpm-quick-nav-2 .items.gpm-quick-nav > [selected],
 .nav-item-container.selected:not([style-scope]):not(.style-scope),
 .nav-item-container.selected:not([style-scope]):not(.style-scope) iron-icon:not([style-scope]):not(.style-scope),
-.primary:not([style-scope]):not(.style-scope) {
+.primary:not([style-scope]):not(.style-scope),
+.underline,
+sj-home[selected="0"] .home-palette-id-3,
+.gpm-headline-header-0 > [slot="underline"],
+.sj-page-indicator-0 .sj-page-tab.iron-selected.sj-page-indicator,
+.iron-selected {
   color: $color-accent !important;
 }
 
@@ -120,24 +125,24 @@ h2[slot="title"] {
   margin: 32px 62px 0 0;
 }
 
-.gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
-.gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(5n + 5),
-.gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
-.gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(5n + 5) {
+.recent-view .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.recent-view .gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.recent-view .gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(5n + 5),
+.recent-view .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(5n + 5) {
   margin: 32px 62px 0 0 !important;
 }
 
-body .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
-body .gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(4n + 4),
-body .gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
-body .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(4n + 4) {
+body .recent-view .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .recent-view .gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .recent-view .gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(4n + 4),
+body .recent-view .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(4n + 4) {
   margin-right: 0 !important;
 }
 
-.gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
-.gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(-n + 4),
-.gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
-.gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(-n + 4) {
+.recent-view .gpm-card-grid-0.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.recent-view .gpm-card-grid-0 div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.recent-view .gpm-card-grid-1.small div.gpm-card-grid > sj-card:nth-child(-n + 4),
+.recent-view .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(-n + 4) {
   margin-top: 0 !important;
 }
 
@@ -199,12 +204,17 @@ body .gpm-card-grid-1 div.gpm-card-grid > sj-card:nth-child(4n + 4) {
   height: auto !important;
 }
 
-// Bigger sub-titles and search result titles
-.cluster .header .cluster-title {
+// Bigger titles, sub-titles and search result titles
+.cluster .header .cluster-title,
+.recent-view .gpm-card-grid-0 > [slot="title"] {
   font-size: 32px !important;
   font-weight: 900 !important;
   margin-bottom: 20px !important;
   margin-top: 30px !important;
+}
+
+h2.gpm-headline-header {
+  font-weight: 900 !important;
 }
 
 .entity-card.material-card .image,
